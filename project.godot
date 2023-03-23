@@ -16,11 +16,11 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=360
-window/size/viewport_height=240
+window/size/viewport_width=320
+window/size/viewport_height=224
 window/size/resizable=false
-window/size/window_width_override=1080
-window/size/window_height_override=720
+window/size/window_width_override=960
+window/size/window_height_override=672
 window/stretch/mode="viewport"
 
 [editor]

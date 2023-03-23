@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://nd2kaomki84d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kt5rh"]
+size = Vector2(8, 32)
+
+[node name="paddle" type="AnimatableBody2D"]
+
+[node name="polygon" type="Polygon2D" parent="."]
+position = Vector2(4, 0)
+polygon = PackedVector2Array(-8, 16, -8, -16, 0, -16, 0, 16)
+
+[node name="collision_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kt5rh")

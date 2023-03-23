@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwovnpky74ddh"]
+
+[ext_resource type="PackedScene" uid="uid://nd2kaomki84d" path="res://paddle.tscn" id="1_h1qll"]
+[ext_resource type="Texture2D" uid="uid://xibhhuqx3v86" path="res://dashes.png" id="1_sjggn"]
+[ext_resource type="PackedScene" uid="uid://dop75fnu42rn" path="res://goal.tscn" id="2_4nyyg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_od51l"]
+size = Vector2(224, 16)
+
+[node name="stage" type="Node2D"]
+
+[node name="divider" type="Polygon2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(158, 0)
+texture = ExtResource("1_sjggn")
+polygon = PackedVector2Array(0, 16, 0, 208, 4, 208, 4, 16)
+
+[node name="walls" type="StaticBody2D" parent="."]
+position = Vector2(160, 112)
+
+[node name="polygon" type="Polygon2D" parent="walls"]
+position = Vector2(-160, -112)
+texture = ExtResource("1_sjggn")
+invert_enabled = true
+invert_border = 2.0
+polygon = PackedVector2Array(48, 208, 48, 16, 272, 16, 272, 208)
+
+[node name="high_wall" type="CollisionShape2D" parent="walls"]
+position = Vector2(0, -104)
+shape = SubResource("RectangleShape2D_od51l")
+
+[node name="low_wall" type="CollisionShape2D" parent="walls"]
+position = Vector2(0, 104)
+shape = SubResource("RectangleShape2D_od51l")
+
+[node name="paddle_one" parent="." instance=ExtResource("1_h1qll")]
+position = Vector2(64, 112)
+
+[node name="paddle_two" parent="." instance=ExtResource("1_h1qll")]
+position = Vector2(256, 112)
+
+[node name="goal_one" parent="." instance=ExtResource("2_4nyyg")]
+position = Vector2(40, 112)
+
+[node name="goal_two" parent="." instance=ExtResource("2_4nyyg")]
+position = Vector2(280, 112)
