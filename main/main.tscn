@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://c52ns4kert6f6"]
+[gd_scene load_steps=2 format=3 uid="uid://c52ns4kert6f6"]
+
+[ext_resource type="Script" path="res://main/main.gd" id="1_m3jcy"]
 
 [node name="main" type="Node"]
+script = ExtResource("1_m3jcy")
 
 [node name="label" type="Label" parent="."]
 anchors_preset = 8
@@ -15,4 +18,5 @@ offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
-text = "hello world!"
+text = "pong"
+horizontal_alignment = 1

@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqwpdas3ilrl5"]
+
+[ext_resource type="Script" path="res://stage/stage.gd" id="1_et3jd"]
+[ext_resource type="Texture2D" uid="uid://xibhhuqx3v86" path="res://stage/textures/dash.png" id="2_p7618"]
+[ext_resource type="PackedScene" path="res://paddle/paddle.tscn" id="3_kyxba"]
+[ext_resource type="PackedScene" path="res://ball/ball.tscn" id="4_05s6g"]
+[ext_resource type="PackedScene" path="res://goal/goal.tscn" id="5_l04lm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_od51l"]
+size = Vector2(224, 16)
+
+[node name="stage" type="Node2D"]
+script = ExtResource("1_et3jd")
+
+[node name="divider" type="Polygon2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.25)
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(158, 0)
+texture = ExtResource("2_p7618")
+polygon = PackedVector2Array(0, 16, 0, 208, 4, 208, 4, 16)
+
+[node name="walls" type="StaticBody2D" parent="."]
+position = Vector2(160, 112)
+collision_layer = 4
+collision_mask = 3
+
+[node name="polygon" type="Polygon2D" parent="walls"]
+position = Vector2(-160, -112)
+texture = ExtResource("2_p7618")
+invert_enabled = true
+invert_border = 2.0
+polygon = PackedVector2Array(48, 208, 48, 16, 272, 16, 272, 208)
+
+[node name="high_wall" type="CollisionShape2D" parent="walls"]
+position = Vector2(0, -104)
+shape = SubResource("RectangleShape2D_od51l")
+
+[node name="low_wall" type="CollisionShape2D" parent="walls"]
+position = Vector2(0, 104)
+shape = SubResource("RectangleShape2D_od51l")
+
+[node name="paddle_one" parent="." instance=ExtResource("3_kyxba")]
+position = Vector2(64, 112)
+
+[node name="paddle_two" parent="." instance=ExtResource("3_kyxba")]
+position = Vector2(256, 112)
+player_id = 1
+
+[node name="ball" parent="." instance=ExtResource("4_05s6g")]
+position = Vector2(160, 112)
+
+[node name="goal_one" parent="." instance=ExtResource("5_l04lm")]
+position = Vector2(40, 112)
+
+[node name="goal_two" parent="." instance=ExtResource("5_l04lm")]
+position = Vector2(280, 112)

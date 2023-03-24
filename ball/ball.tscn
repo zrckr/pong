@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://ball/ball.gd" id="1_vlylq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d8dla"]
+radius = 4.0
+
+[node name="ball" type="AnimatableBody2D"]
+sync_to_physics = false
+script = ExtResource("1_vlylq")
+
+[node name="collision_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_d8dla")
