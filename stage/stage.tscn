@@ -52,6 +52,7 @@ position = Vector2(160, 112)
 
 [node name="goal_one" parent="." instance=ExtResource("5_l04lm")]
 position = Vector2(40, 112)
+score_for_player = 1
 
 [node name="goal_two" parent="." instance=ExtResource("5_l04lm")]
 position = Vector2(280, 112)
