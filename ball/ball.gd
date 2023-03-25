@@ -1,6 +1,8 @@
 class_name Ball
 extends AnimatableBody2D
 
+const DIRECTION_FIX := 0.125	# 8 possible directions
+
 @export_range(0, 1000, 10, 'suffix:px/s')
 var speed: float
 
@@ -59,7 +61,12 @@ func _bounce_off_paddle(paddle: Paddle) -> void:
 
 func _randomize_direction() -> void:
 	var random_direction = Vector2()
-	random_direction.x = randf_range(-1, 1)
-	random_direction.y = randf_range(-1, 1)
+	
+	# Exclude directions parallel to the X and Y axes
+	while is_zero_approx(random_direction.x) or \
+		is_zero_approx(random_direction.y):
+		random_direction.x = snappedf(randf_range(-1, 1), DIRECTION_FIX)
+		random_direction.y = snappedf(randf_range(-1, 1), DIRECTION_FIX)
+	
 	random_direction = random_direction.normalized()
 	velocity = random_direction * current_speed
