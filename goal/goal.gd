@@ -1,7 +1,7 @@
 extends Area2D
 
-@export_enum("Player One", "Player Two")
-var score_for_player: int
+@export
+var opposite_player: Game.Player
 
 
 func _ready() -> void:
@@ -14,4 +14,5 @@ func _on_body_entered(body: PhysicsBody2D) -> void:
 
 
 func _reset_ball_and_score(ball: Ball) -> void:
+	Game.increase_score_for(opposite_player)
 	ball.reset_speed_and_position()

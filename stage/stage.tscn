@@ -45,14 +45,14 @@ position = Vector2(64, 112)
 
 [node name="paddle_two" parent="." instance=ExtResource("3_kyxba")]
 position = Vector2(256, 112)
-player_id = 1
+player = 1
 
 [node name="ball" parent="." instance=ExtResource("4_05s6g")]
 position = Vector2(160, 112)
 
 [node name="goal_one" parent="." instance=ExtResource("5_l04lm")]
 position = Vector2(40, 112)
-score_for_player = 1
+opposite_player = 1
 
 [node name="goal_two" parent="." instance=ExtResource("5_l04lm")]
 position = Vector2(280, 112)
