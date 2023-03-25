@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://tlsgx31p3s7l"]
 
 [ext_resource type="Script" path="res://paddle/paddle.gd" id="1_uqv01"]
 

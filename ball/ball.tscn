@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://cns3jgjcu10aq"]
 
 [ext_resource type="Script" path="res://ball/ball.gd" id="1_vlylq"]
 
@@ -6,8 +6,12 @@
 radius = 4.0
 
 [node name="ball" type="AnimatableBody2D"]
+collision_mask = 6
 sync_to_physics = false
 script = ExtResource("1_vlylq")
+speed = 150.0
+max_speed = 750.0
+acceleration = 10.0
 
 [node name="collision_shape" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_d8dla")

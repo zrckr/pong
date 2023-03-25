@@ -1,3 +1,4 @@
+class_name Paddle
 extends AnimatableBody2D
 
 @export_enum("Player One", "Player Two")
