@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Inputs="*res://autoload/inputs.gd"
 Game="*res://autoload/game.gd"
 
 [display]
