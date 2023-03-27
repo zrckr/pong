@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://d25gup1gitbru"
-path="res://.godot/imported/blippo_light_sf.ttf-72aa9bc7c1824a7a486723378503882a.fontdata"
+path="res://.godot/imported/blippo_light_sf.ttf-182cc9857d37a8d4fd862a11080c172f.fontdata"
 
 [deps]
 
-source_file="res://menu/fonts/blippo_light_sf.ttf"
-dest_files=["res://.godot/imported/blippo_light_sf.ttf-72aa9bc7c1824a7a486723378503882a.fontdata"]
+source_file="res://ui/fonts/blippo_light_sf.ttf"
+dest_files=["res://.godot/imported/blippo_light_sf.ttf-182cc9857d37a8d4fd862a11080c172f.fontdata"]
 
 [params]
 

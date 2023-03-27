@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ktqcm5sewhbm"
-path="res://.godot/imported/atari_classic_extrasmooth.ttf-d69baf77d215dadee00ddeb9a82e164f.fontdata"
+path="res://.godot/imported/atari_classic_extrasmooth.ttf-5b3a8b1badbbad2ccaa1ad1643072800.fontdata"
 
 [deps]
 
-source_file="res://menu/fonts/atari_classic_extrasmooth.ttf"
-dest_files=["res://.godot/imported/atari_classic_extrasmooth.ttf-d69baf77d215dadee00ddeb9a82e164f.fontdata"]
+source_file="res://ui/fonts/atari_classic_extrasmooth.ttf"
+dest_files=["res://.godot/imported/atari_classic_extrasmooth.ttf-5b3a8b1badbbad2ccaa1ad1643072800.fontdata"]
 
 [params]
 

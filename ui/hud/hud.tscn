@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvkbxsl5jvwgf"]
+
+[ext_resource type="PackedScene" uid="uid://dnmcjs7y7r0yw" path="res://ui/hud/score.tscn" id="1_rms1o"]
+
+[node name="hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="player_one" parent="." instance=ExtResource("1_rms1o")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 24.0
+
+[node name="player_two" parent="." instance=ExtResource("1_rms1o")]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 8.0
+offset_right = 312.0
+offset_bottom = 24.0
+player_id = 1

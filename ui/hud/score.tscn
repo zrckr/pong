@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnmcjs7y7r0yw"]
+
+[ext_resource type="FontFile" uid="uid://ktqcm5sewhbm" path="res://ui/fonts/atari_classic_extrasmooth.ttf" id="1_1xwdd"]
+[ext_resource type="Script" path="res://ui/hud/score.gd" id="1_i2l41"]
+
+[node name="score" type="VBoxContainer"]
+offset_right = 16.0
+offset_bottom = 16.0
+theme_override_constants/separation = 0
+script = ExtResource("1_i2l41")
+
+[node name="player" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 2
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("1_1xwdd")
+theme_override_font_sizes/font_size = 8
+text = "1P"
+horizontal_alignment = 1
+
+[node name="value" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 2
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("1_1xwdd")
+theme_override_font_sizes/font_size = 8
+text = "00"
+horizontal_alignment = 1
