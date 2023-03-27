@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cui2hs6ihf0aw"]
+
+[ext_resource type="Script" path="res://paddle/paddle_cpu.gd" id="1_hhiyl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kt5rh"]
+size = Vector2(8, 32)
+
+[node name="paddle_cpu" type="AnimatableBody2D"]
+collision_layer = 2
+collision_mask = 5
+sync_to_physics = false
+script = ExtResource("1_hhiyl")
+speed = 190.0
+
+[node name="polygon" type="Polygon2D" parent="."]
+position = Vector2(4, 0)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-8, 16, -8, -16, 0, -16, 0, 16)
+
+[node name="collision_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kt5rh")
+
+[node name="timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.15

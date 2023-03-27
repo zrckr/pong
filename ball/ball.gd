@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(velocity * delta)
 	var collider = collision.get_collider() if collision else null
 	
-	if collider is Paddle:
+	if collider is Paddle or collider is PaddleCpu:
 		_bounce_off_paddle(collider)
 	elif collider:
 		_bounce_off_wall(collision)
@@ -48,7 +48,7 @@ func _bounce_off_wall(collision: KinematicCollision2D) -> void:
 	velocity = velocity.bounce(collision.get_normal())
 
 
-func _bounce_off_paddle(paddle: Paddle) -> void:
+func _bounce_off_paddle(paddle: Node2D) -> void:
 	var paddle_position = paddle.global_position
 	var direction_to_ball = paddle_position.direction_to(global_position)
 	

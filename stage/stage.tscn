@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqwpdas3ilrl5"]
+[gd_scene load_steps=8 format=3 uid="uid://bmcd3s1o4s37w"]
 
 [ext_resource type="Script" path="res://stage/stage.gd" id="1_et3jd"]
 [ext_resource type="Texture2D" uid="uid://xibhhuqx3v86" path="res://stage/textures/dash.png" id="2_p7618"]
 [ext_resource type="PackedScene" uid="uid://tlsgx31p3s7l" path="res://paddle/paddle.tscn" id="3_kyxba"]
 [ext_resource type="PackedScene" uid="uid://cns3jgjcu10aq" path="res://ball/ball.tscn" id="4_05s6g"]
+[ext_resource type="PackedScene" uid="uid://cui2hs6ihf0aw" path="res://paddle/paddle_cpu.tscn" id="4_wbt75"]
 [ext_resource type="PackedScene" path="res://goal/goal.tscn" id="5_l04lm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_od51l"]
@@ -44,8 +45,18 @@ shape = SubResource("RectangleShape2D_od51l")
 position = Vector2(64, 112)
 
 [node name="paddle_two" parent="." instance=ExtResource("3_kyxba")]
+process_mode = 4
+visible = false
 position = Vector2(256, 112)
 player = 1
+
+[node name="paddle_cpu" parent="." node_paths=PackedStringArray("ball") instance=ExtResource("4_wbt75")]
+position = Vector2(256, 112)
+min_bounds = 32.0
+max_bounds = 192.0
+min_distance_to_ball = 48
+detection_threshhold = 0.33
+ball = NodePath("../ball")
 
 [node name="ball" parent="." instance=ExtResource("4_05s6g")]
 position = Vector2(160, 112)
