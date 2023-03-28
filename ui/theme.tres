@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://ds3oc461umfgb"]
+
+[ext_resource type="FontFile" uid="uid://ktqcm5sewhbm" path="res://ui/fonts/atari_classic_extrasmooth.ttf" id="1_vlm6e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnh8a"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbuab"]
+bg_color = Color(1, 1, 1, 1)
+
+[resource]
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 8
+Button/fonts/font = ExtResource("1_vlm6e")
+Button/styles/normal = SubResource("StyleBoxFlat_lnh8a")
+Button/styles/pressed = SubResource("StyleBoxFlat_hbuab")
