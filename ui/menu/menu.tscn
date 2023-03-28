@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://62uv2m0g23xq"]
+[gd_scene load_steps=7 format=3 uid="uid://62uv2m0g23xq"]
 
 [ext_resource type="Script" path="res://util/state_machine.gd" id="1_gwogl"]
 [ext_resource type="Script" path="res://ui/menu/menu.gd" id="1_irjxg"]
 [ext_resource type="PackedScene" uid="uid://dltcnojyh7pjc" path="res://ui/menu/sub_menus/main_menu.tscn" id="3_wjgau"]
 [ext_resource type="PackedScene" uid="uid://cu3t3v6wv5m1j" path="res://ui/menu/sub_menus/pause_menu.tscn" id="4_b5b02"]
 [ext_resource type="PackedScene" uid="uid://detbx36am0gov" path="res://ui/menu/sub_menus/settings_menu.tscn" id="5_bt0ag"]
+[ext_resource type="PackedScene" uid="uid://br7rtf8lkdeua" path="res://ui/menu/sub_menus/game_over.tscn" id="6_5oqbi"]
 
 [node name="menu" type="CanvasLayer"]
 script = ExtResource("1_irjxg")
@@ -20,4 +21,7 @@ script = ExtResource("1_gwogl")
 visible = false
 
 [node name="settings_menu" parent="state_machine" instance=ExtResource("5_bt0ag")]
+visible = false
+
+[node name="game_over" parent="state_machine" instance=ExtResource("6_5oqbi")]
 visible = false

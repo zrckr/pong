@@ -5,6 +5,7 @@ const SubMenu := {
 	MAIN = &'main_menu',
 	PAUSE = &'pause_menu',
 	SETTINGS = &'settings_menu',
+	GAME_OVER = &'game_over',
 }
 
 @onready
