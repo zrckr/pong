@@ -39,6 +39,7 @@ func begin_game() -> void:
 	
 	for player_id in _scores:
 		_scores[player_id] = 0
+		score_updated.emit(player_id, 0)
 
 
 func increase_score_for(player_id: Player) -> void:

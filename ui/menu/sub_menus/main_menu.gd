@@ -12,7 +12,7 @@ func begin(_kwargs := {}) -> void:
 
 
 func _on_play_pressed() -> void:
-	Game.state = Game.GameState.STAGE
+	Game.begin_game()
 
 
 func _on_settings_pressed() -> void:

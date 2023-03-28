@@ -1,11 +1,7 @@
 extends Node
 
-func is_select_pressed() -> bool:
-	return Input.is_action_just_pressed('select')
-
-
-func is_start_pressed() -> bool:
-	return Input.is_action_just_pressed('start')
+func is_pause_pressed() -> bool:
+	return Input.is_action_just_pressed('pause')
 
 
 func get_axis(player_id: Game.Player) -> float:
