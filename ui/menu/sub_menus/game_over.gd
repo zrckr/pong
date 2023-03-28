@@ -6,8 +6,9 @@ func _ready() -> void:
 	%exit_menu.pressed.connect(_on_exit_menu_pressed)
 
 
-func begin(_kwargs := {}) -> void:
+func begin(kwargs := {}) -> void:
 	%play_again.grab_focus()
+	%message.text = 'player %d won!' % kwargs.player_id
 
 
 func _on_play_again_pressed() -> void:
