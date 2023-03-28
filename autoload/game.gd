@@ -8,7 +8,7 @@ signal player_won(player_id)
 
 const MAX_SCORE := 10
 
-enum State {
+enum GameState {
 	MENU,
 	STAGE,
 }
@@ -18,7 +18,7 @@ enum Player {
 	TWO
 }
 
-var state: State:
+var state: GameState:
 	get: return _state
 	set(value):
 		assert(value != _state, 'The state is already set')
@@ -30,11 +30,11 @@ var _scores = {
 	Player.TWO: -1,
 }
 
-var _state: State
+var _state: GameState
 
 
 func begin_game() -> void:
-	state = State.STAGE
+	state = GameState.STAGE
 	randomize()
 	
 	for player_id in _scores:
@@ -42,7 +42,7 @@ func begin_game() -> void:
 
 
 func increase_score_for(player_id: Player) -> void:
-	assert(state == State.STAGE, 'Game has not begun')
+	assert(state == GameState.STAGE, 'Game has not begun')
 	
 	_scores[player_id] += 1
 	score_updated.emit(player_id, _scores[player_id])
@@ -52,5 +52,5 @@ func increase_score_for(player_id: Player) -> void:
 
 func _try_end_game(player_id: Player) -> void:
 	if _scores[player_id] == MAX_SCORE:
-		state = State.MENU
+		state = GameState.MENU
 		player_won.emit(player_id)
