@@ -12,7 +12,7 @@ func begin(_kwargs := {}) -> void:
 
 
 func _on_play_pressed() -> void:
-	assert(false, 'Method not implemented')
+	Game.state = Game.GameState.STAGE
 
 
 func _on_settings_pressed() -> void:

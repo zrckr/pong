@@ -6,7 +6,7 @@ func _ready() -> void:
 
 
 func begin(_kwargs := {}) -> void:
-	pass
+	%save_back.grab_focus()
 
 
 func _on_save_back_pressed() -> void:
