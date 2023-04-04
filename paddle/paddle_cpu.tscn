@@ -10,7 +10,7 @@ collision_layer = 2
 collision_mask = 5
 sync_to_physics = false
 script = ExtResource("1_hhiyl")
-speed = 190.0
+speed = 210.0
 
 [node name="polygon" type="Polygon2D" parent="."]
 position = Vector2(4, 0)

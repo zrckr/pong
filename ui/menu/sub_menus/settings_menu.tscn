@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://detbx36am0gov"]
+[gd_scene load_steps=5 format=3 uid="uid://detbx36am0gov"]
 
 [ext_resource type="Script" path="res://ui/menu/sub_menus/settings_menu.gd" id="1_4u26a"]
 [ext_resource type="FontFile" uid="uid://d25gup1gitbru" path="res://ui/fonts/blippo_light_sf.ttf" id="2_2a7x3"]
 [ext_resource type="Theme" uid="uid://ds3oc461umfgb" path="res://ui/theme.tres" id="3_sc2rs"]
+[ext_resource type="FontFile" uid="uid://ktqcm5sewhbm" path="res://ui/fonts/atari_classic_extrasmooth.ttf" id="4_xdejc"]
 
 [node name="settings_menu" type="Control"]
 texture_filter = 1
@@ -37,6 +38,51 @@ theme_override_font_sizes/font_size = 32
 text = "s e t t i n g s"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="vbox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 248.0
+offset_bottom = 128.0
+theme_override_constants/separation = 8
+
+[node name="max_score" type="HBoxContainer" parent="vbox"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 2
+
+[node name="label" type="Label" parent="vbox/max_score"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xdejc")
+theme_override_font_sizes/font_size = 8
+text = "Max Score"
+vertical_alignment = 1
+
+[node name="spin_box" type="SpinBox" parent="vbox/max_score"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+value = 10.0
+rounded = true
+alignment = 1
+
+[node name="versus" type="HBoxContainer" parent="vbox"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 2
+
+[node name="label" type="Label" parent="vbox/versus"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xdejc")
+theme_override_font_sizes/font_size = 8
+text = "Versus"
+vertical_alignment = 1
+
+[node name="button" type="Button" parent="vbox/versus"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Computer"
 
 [node name="save_back" type="Button" parent="."]
 unique_name_in_owner = true

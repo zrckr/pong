@@ -6,8 +6,6 @@ signal score_updated(player_id, score)
 
 signal player_won(player_id)
 
-const MAX_SCORE := 10
-
 enum GameState {
 	MENU,
 	STAGE,
@@ -17,6 +15,9 @@ enum Player {
 	ONE,
 	TWO
 }
+
+var max_score := 10
+var is_player_two_cpu := true
 
 var state: GameState:
 	get: return _state
@@ -52,6 +53,6 @@ func increase_score_for(player_id: Player) -> void:
 
 
 func _try_end_game(player_id: Player) -> void:
-	if _scores[player_id] == MAX_SCORE:
+	if _scores[player_id] == max_score:
 		state = GameState.MENU
 		player_won.emit(player_id)
